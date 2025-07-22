@@ -12,6 +12,28 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Aplica Poppins solo a los h1 */
+h1 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* El resto del body con Inter (la clase que vas a aplicar al body en JSX) */
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.swiper-effect-cards .swiper-slide,
+.swiper-effect-cards .swiper-slide::before,
+.swiper-effect-cards .swiper-slide::after {
+  box-shadow: none !important;
+  background: none !important;
+  border: none !important;
+  opacity: 1 !important; /* en caso que esté semi-transparente */
+}
+.swiper-wrapper {
+  overflow: visible !important; /* para que no se "recorte" sombra */
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;

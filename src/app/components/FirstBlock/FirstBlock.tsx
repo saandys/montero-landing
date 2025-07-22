@@ -7,33 +7,32 @@ import { Reveal } from "../Reveal";
 
 export function FirstBlock() {
     return (
-        <div className="relative p-4 md:py-40">
+        <div id="home" className="relative p-4 md:px-40 py-15">
+
             <BackgroundRadialRight />
             <div className="grid max-w-5xl mx-auto md:grid-cols-2">
                 <div>
                     <Reveal>
                         <h1 className="text-5xl font-semibold">
-                            El nuevo
-                            <span className="block degradedBlue text-blue-200">
-                                banco digital
+                            Tu zapatería de
+                            <span className="block text-[#e4a674]">
+                                toda la vida
                             </span>
-                            para todos
+                            
                         </h1>
                     </Reveal>
                     <Reveal>
-                        <p className="max-w-md mt-10">Nuestro equipo de expertos aa aaa aaaaaaaa aaaaaa aaaa
-                            aaaaaa aaa aaaaa aaaa aaaaa aaaaaaaaaa aaaaaa aaaaa aaa
-                            saa aaaaaaaaaa aaa aaaaaaaaaaaa aaaaaaa aaaaa aaaaaaaaaa
+                        <p className="max-w-md mt-10">Desde hace dos generaciones, nuestra familia ha perfeccionado el arte de la reparación y restauración de calzado. Hoy, seguimos con la misma pasión y dedicación, asegurando que cada par de zapatos reciba el cuidado que merece. Porque no solo reparamos calzado, preservamos historias, pasos y recuerdos.
                         </p>
                     </Reveal>
                     <Reveal>
                         <div className="my-8">
-                            <Link href="#clients" className="px-4 py-3 rounded-md bg-blue-200">Empieza ahora</Link>
+                            <Link href="#clients" className="px-4 py-3 rounded-md bg-[#83552d]">Solicita tu reparación</Link>
                         </div>
                     </Reveal>
                 </div>
                 <MotionTransition className="flex items-center">
-                    <Image src="/assets/cards-block.png" alt="Card" width={450} height={450} className="h-auto w-72 md:w-full" />
+                    <Image src="/assets/home_image.png" alt="Card" width={450} height={450} className="h-auto w-72 md:w-full" />
                 </MotionTransition>
             </div>
         </div>

@@ -8,27 +8,23 @@ import Image from "next/image"
 
 export function BestBusiness() {
     return (
-        <div className="relative px-6 py-20 md:py-64">
+        <div id="services" className="relative px-6 py-10 md:py-24">
             <BackgroundRadialLeft />
             <div className="grid max-w-5xl mx-auto md:grid-cols-2">
                 <div>
                     <Reveal>
                         <h2 className="text-5xl font-semibold">
-                            <span className="block degradedBlue text-blue-200" >Tú haces el negocio</span>
-                            nosotros manegamos <br />
-                            el dinero
+                            <span className="block text-[#e4a674]">Mucho más</span>
+                            que reparación de calzado
                         </h2>
                     </Reveal>
                     <Reveal>
-                        <p className="max-w-md mt-10">Con la targeta aaaaaaa aaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaa aaaaaaa
-                            aaaaaaaaaa aaaaaa aaaaa aaaaaaa aaaaaaaaa aaaaaaaaa
-                            aaaaa aaaaaa aaaaaaa aaaaa
-                            aaaaaaa aaaaaa aaaaaa aaaaa aaaaaaaaa aaaaaaaaaa aaaa
+                        <p className="max-w-md mt-10">Nos especializamos en trabajos artesanales de alta calidad para alargar la vida útil de tus artículos favoritos.
                         </p>
                     </Reveal>
                     <Reveal>
                         <div className="my-8">
-                            <Link href="#clients" className="px-4 py-3 rounded-md bg-blue-200">
+                            <Link href="#clients" className="px-4 py-3 rounded-md bg-[#83552d]">
                                 Elige tu plan
                             </Link>    
                         </div>
@@ -37,14 +33,15 @@ export function BestBusiness() {
                 <div className="grid items-center py-5 md:p-8">
                     {dataFeaturesBusiness.map(({id, icon, title, description}) => (
                         <Reveal key={id}>
-                            <div className="grid grid-flow-col gap-5 px-4 py-2 rounded-3xl group hover:bg-gray-800">
-                                <Image src={`/assets/${icon}.png`} alt={title} width={40} height={40} />
-                                <div>
-                                    <h4 className="text-white">{title}</h4>
-                                    <p className="text-gray-400">{description}</p>
-                                </div>
-                            </div>
-                        </Reveal>
+                        <div className="grid grid-flow-col gap-5 px-4 py-2 rounded-3xl group hover:bg-[#9f6f45] bg-[#9f6f4584] mb-2 transition-colors duration-300">
+                          <Image src={`/assets/${icon}.png`} alt={title} width={40} height={40} />
+                          <div>
+                            <h4 className="text-[#f3ebe2] font-bold">{title}</h4>
+                            <p className="text-[#d9cfc4]">{description}</p>
+                          </div>
+                        </div>
+                      </Reveal>
+                      
                     ))}
                 </div>
             </div>

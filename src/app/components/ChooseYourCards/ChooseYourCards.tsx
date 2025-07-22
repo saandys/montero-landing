@@ -17,21 +17,27 @@ export function ChooseYourCards() {
             <div
             className="block max-w-5xl mx-auto md:grid md:grid-cols-2">
                 <Reveal>
-                    <h2 className="text-5xl font-semibold">Elige la tarjeta que más 
-                        <span className="block text-blue-200">se adapta a tus necesidades</span>
+                    <h2 className="text-5xl font-semibold">Otros de <br/> nuestros
+                        <span className=" text-[#e4a674]"> trabajos</span>
                         
                     </h2>
                 </Reveal>
                 <div className="px-5">
+                    
                     <MotionTransition>
                         <Swiper
+                        
                             effect={"cards"}
                             grabCursor={true}
                             modules={[EffectCards]}
+                            cardsEffect={{
+                                perSlideOffset: 8,  // Ajusta el desplazamiento si quieres menos apilado
+                                slideShadows: false // Esta es la clave para eliminar sombras del efecto cards
+                              }}
                             >
                                 {dataCards.map(({image, id}) => (
                                     <SwiperSlide key={id}>
-                                        <Image src={image} alt="Credit card" width="400" height="300" />
+                                        <Image src={image} alt="Credit card" width="400" height="300" className="rounded-md"/>
                                     </SwiperSlide>
                                 ))}
 
