@@ -10,6 +10,7 @@ import { Header } from "./components/Header/header";
 import PaymentMethods from "./components/PaymentMethods/PaymentMethods";
 import { Inter   } from 'next/font/google'
 import VideoBlock from "./components/VideoBlock/VideoBlock";
+import Contact from "./components/Contact/Contact";
 
 const roboto = Inter ({
   weight: '400',
@@ -37,7 +38,7 @@ const Home = () => {
          <VideoBlock />
          <ChooseYourCards />
          <ControlBilling />
-         
+         <Contact />
          {/* <PaymentMethods /> */}
 
          <Footer /> 

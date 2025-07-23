@@ -12,8 +12,8 @@ export const dataHeader = [
     ,
     {
         id:3,
-        name: "Sobre nosotros",
-        idLink: "#about"
+        name: "Otros trabajos",
+        idLink: "#others"
     }
     ,
     {

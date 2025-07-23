@@ -12,8 +12,8 @@ import 'swiper/css/effect-cards'
 
 export function ChooseYourCards() {
     return (
-        <div className="relative px-6 py-20 md-py-64" id="tarjetas">
-            <BackgroundRadialRight />
+        <div id="other" className="relative px-6 py-20 md-py-64">
+
             <div
             className="block max-w-5xl mx-auto md:grid md:grid-cols-2">
                 <Reveal>
