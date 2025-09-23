@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Reveal } from "../Reveal";
 import { dataContactItems } from "./Contact.data";
 import Image from "next/image";
 
 const Contact = () => {
+
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const whatsappNumber = "34699123456"; // tu número
+    const text = `Nombre: ${name}\nMensaje: ${message}`;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+    
+    window.open(url, "_blank"); // abre WhatsApp en nueva pestaña
+  };
+
   return (
     <>
       <div className="relative px-6 py-10 md:py-64 " id="contact">
@@ -45,21 +59,11 @@ const Contact = () => {
               </div>
             
               <div className="relative ">
-                <form className="rounded-lg bg-[#9f6f4584] mt-4 p-6 shadow-lg dark:bg-dark-2 sm:p-12">
+                <form onSubmit={handleSubmit} className="rounded-lg bg-[#9f6f4584] mt-4 p-6 shadow-lg dark:bg-dark-2 sm:p-12">
                   <ContactInputBox
                     type="text"
                     name="name"
                     placeholder="Nombre"
-                  />
-                  <ContactInputBox
-                    type="text"
-                    name="email"
-                    placeholder="Email"
-                  />
-                  <ContactInputBox
-                    type="text"
-                    name="phone"
-                    placeholder="Teléfono"
                   />
                   <ContactTextArea
                     row="6"
@@ -68,11 +72,11 @@ const Contact = () => {
                     defaultValue=""
                   />
                   <div>
-                    <button
+                   <button
                       type="submit"
-                      className="w-full rounded border border-primary bg-primary p-3 text-white transition hover:bg-opacity-90"
+                      className="w-full rounded border cursor-pointer border-primary bg-primary/100 p-3 text-white transition hover:bg-primary/90"
                     >
-                      Enviar
+                      Escribe tu consulta aquí…
                     </button>
                   </div>
                 </form>
