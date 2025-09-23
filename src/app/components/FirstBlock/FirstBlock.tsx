@@ -27,7 +27,7 @@ export function FirstBlock() {
                     </Reveal>
                     <Reveal>
                         <div className="my-8">
-                            <Link href="#clients" className="px-4 py-3 rounded-md bg-[#83552d]">Solicita tu reparación</Link>
+                            <Link href="#contact" className="px-4 py-3 rounded-md bg-[#83552d]">Solicita tu reparación</Link>
                         </div>
                     </Reveal>
                 </div>

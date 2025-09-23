@@ -6,19 +6,21 @@ import Image from "next/image";
 const Contact = () => {
   return (
     <>
-      <section className="relative py-20 md:py-64">
-        <div className="block max-w-5xl mx-auto md:grid md:grid-cols-2">
+      <div className="relative px-6 py-10 md:py-64 " id="contact">
+        <div className="grid max-w-5xl mx-auto md:grid-cols-2">
               <div className="mb-12 max-w-[570px] lg:mb-0 mr-4">
                 <Reveal>
                     <h2 className="text-5xl font-semibold">Contacta con
-                        <span className=" text-[#e4a674]"> nosotros</span>
+                        <span className="block text-[#e4a674]"> nosotros</span>
                     </h2>
                 </Reveal>
                 <Reveal>
-                    <p className="max-w-md mt-10">Nos especializamos en trabajos artesanales de alta calidad para alargar la vida útil de tus artículos favoritos.
+                    <p className="max-w-md mt-10"><strong>¿Tienes dudas o necesitas más información?</strong><br/><br/>
+                    Llámanos directamente o completa el formulario y nos pondremos en contacto contigo lo antes posible. <br/> 
+                    ¡Estamos encantados de ayudarte!
                     </p>
                 </Reveal>
-                <div className="grid items-center pt-3 md:p-8">
+                <div className="grid items-center pt-6 md:p-8">
                     {dataContactItems.map(({id, icon, title, description}) => (
                         <Reveal key={id}>
                         <div className="my-5 flex w-full max-w-[370px]">
@@ -42,8 +44,8 @@ const Contact = () => {
                 
               </div>
             
-              <div className="relative rounded-lg bg-[#9f6f4584] mt-4 p-6 shadow-lg dark:bg-dark-2 sm:p-12">
-                <form>
+              <div className="relative ">
+                <form className="rounded-lg bg-[#9f6f4584] mt-4 p-6 shadow-lg dark:bg-dark-2 sm:p-12">
                   <ContactInputBox
                     type="text"
                     name="name"
@@ -77,7 +79,7 @@ const Contact = () => {
                 
               </div>
           </div>
-      </section>
+      </div>
     </>
   );
 };
