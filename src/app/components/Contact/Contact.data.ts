@@ -9,15 +9,14 @@ export const dataContactItems: ContactData = [
     },
     {
         id:2,
-        icon: "tel",
-        title:"Teléfono",
-        description:"630511756"
-   },
-    {
-        id:3,
         icon: "sobre",
         title:"Correo electrónico",
         description:"carmionera@hotmail.com"
    },
-    
+        {
+        id:3,
+        icon: "tel",
+        title:"Teléfono",
+        description:"+34630511756"
+   },
 ];

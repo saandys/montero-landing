@@ -6,45 +6,35 @@ import { footerData, footerSocialNetworks } from "./Footer.data";
 
 export function Footer() {
     return (
-        <div className="max-w-5xl p-6 mx-auto mt-10 md:-mt-10">
-            <div className="justify-between md:flex">
-                <div>
-                    <Image src="/assets/logo.png" width={200} height={40} alt="Logo Bank" />
-                <Reveal>
-                    <p className="mt-5 text-gray-400 max-w-[250px]">Una neva forma de hacer pagosa</p>
+            
 
-                </Reveal>
-                </div>
-                {footerData.map(({id, title, links}) => (
-                    <div key={id}>
-                        <h4 className="mt-8 text-lg md:mt-0">
-                            <Reveal>
-                                {title}
-                            </Reveal>
-                        </h4>
-                        {links.map(({id, name, link}) => (
-                            <Link key={id} href={link} className="block text-gray-400 mt-4">
-                            {name}
-                            </Link>
-                        ))}
-                    </div>
-                ))}
-            </div>
-            <div className="border-gray-700 border-[1px] my-7" />
-            <div className="items-center justify-between md:flex">
-                <div className="my-3">
-                    <Reveal>
-                        2025 Zapateria. All Rights Reserved
-                    </Reveal>
-                </div>
-                <div className="flex gap-5">
-                    {footerSocialNetworks.map(({id, icon, link})=> (
-                        <Link key={id} href={link} className="text-2xl">
-                            {icon}
-                        </Link>
-                    ))}
-                </div>
-            </div>
+
+<footer className="rounded-lg shadow-sm">
+    <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <div className="sm:flex sm:items-center sm:justify-between">
+                               <Image src="/assets/logo.png" width={200} height={40} alt="Logo Bank" />
+
+            <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="#" className="hover:underline me-4 md:me-6">Nosotros</a>
+                </li>
+                <li>
+                    <a href="#" className="hover:underline me-4 md:me-6">Política de privacidad</a>
+                </li>
+                <li>
+                    <a href="#" className="hover:underline me-4 md:me-6">Licencia</a>
+                </li>
+                <li>
+                    <a href="#" className="hover:underline">Contacto</a>
+                </li>
+            </ul>
         </div>
+        <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+        <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2025 Zapateria Montero. All Rights Reserved</span>
+    </div>
+</footer>
+
+
+
     )
 }
