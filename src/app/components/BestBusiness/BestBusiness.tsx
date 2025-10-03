@@ -8,8 +8,8 @@ import Image from "next/image"
 
 export function BestBusiness() {
     return (
-        <div id="services" className="relative px-6 py-10 md:py-24">
-            <BackgroundRadialLeft />
+        <div id="services" className="relative px-6 pt-10 md:pt-28 md:pb-16 bg-[#674321]">
+           
             <div className="grid max-w-5xl mx-auto md:grid-cols-2">
                 <div>
                     <Reveal>
@@ -22,13 +22,7 @@ export function BestBusiness() {
                         <p className="max-w-md mt-10">Nos especializamos en trabajos artesanales de alta calidad para alargar la vida útil de tus artículos favoritos.
                         </p>
                     </Reveal>
-                    <Reveal>
-                        <div className="my-8">
-                            <Link href="#clients" className="px-4 py-3 rounded-md bg-[#83552d]">
-                                Elige tu plan
-                            </Link>    
-                        </div>
-                    </Reveal>
+                  
                 </div>
                 <div className="grid items-center py-5 md:p-8">
                     {dataFeaturesBusiness.map(({id, icon, title, description}) => (

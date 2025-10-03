@@ -4,37 +4,60 @@ import { BackgroundRadialRight } from "../BackgroundRadialRight";
 import { MotionTransition } from "../MotionTransition";
 import Image from "next/image";
 import { Reveal } from "../Reveal";
+import { Dynalight, Gasoek_One } from 'next/font/google'
+import Silk from "@/components/Silk";
+
+const dynalight = Dynalight({ subsets: ['latin'], weight: '400' })
+const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
+
 
 export function FirstBlock() {
-    return (
-        <div id="home" className="relative p-4 md:px-40 py-15">
+   return (
+  <div id="home" className="relative w-full h-screen p-4 overflow-hidden">
+    {/* Fondo animado */}
+   
+   
 
-            <BackgroundRadialRight />
-            <div className="grid max-w-5xl mx-auto md:grid-cols-2">
-                <div>
-                    <Reveal>
-                        <h1 className="text-5xl font-semibold">
-                            Tu zapatería de
-                            <span className="block text-[#e4a674]">
-                                toda la vida
-                            </span>
-                            
-                        </h1>
-                    </Reveal>
-                    <Reveal>
-                        <p className="max-w-md mt-10">Desde hace dos generaciones, nuestra familia ha perfeccionado el arte de la reparación y restauración de calzado. Hoy, seguimos con la misma pasión y dedicación, asegurando que cada par de zapatos reciba el cuidado que merece. Porque no solo reparamos calzado, preservamos historias, pasos y recuerdos.
-                        </p>
-                    </Reveal>
-                    <Reveal>
-                        <div className="my-8">
-                            <Link href="#contact" className="px-4 py-3 rounded-md bg-[#83552d]">Solicita tu reparación</Link>
-                        </div>
-                    </Reveal>
-                </div>
-                <MotionTransition className="flex items-center">
-                    <Image src="/assets/home_image.png" alt="Card" width={450} height={450} className="h-auto w-72 md:w-full" />
-                </MotionTransition>
-            </div>
-        </div>
-    )
+    {/* Contenido principal */}
+    <div className="grid max-w-5xl mx-auto md:grid-cols-2 relative z-10">
+      <div>
+        <Reveal>
+          <h1 className={`text-7xl font-semibold ${gasoekOne.className}`}>
+            Tu zapatería <br /> de <span className="text-[#e4a674]">toda la vida</span>
+          </h1>
+        </Reveal>
+        <Reveal>
+          <h1 className={`ml-1 text-4xl text-[#f6d5b9] mt-6 ${dynalight.className}`}>
+            Dos generaciones acompañando y <br />cuidando cada paso que das
+          </h1>
+        </Reveal>
+        <Reveal>
+          <p className="max-w-md mt-6">
+            Desde hace décadas perfeccionamos el arte de la reparación y restauración de calzado. Con
+            la misma pasión de siempre, damos nueva vida a tus zapatos y preservamos las historias que
+            caminan contigo.
+          </p>
+        </Reveal>
+        <Reveal>
+          <div className="my-8">
+            <Link href="#contact" className="px-4 py-3 rounded-md bg-[#83552d]">
+              Solicita tu reparación
+            </Link>
+          </div>
+        </Reveal>
+      </div>
+
+      <MotionTransition className="flex items-center">
+        <Image
+          src="/assets/home_image.png"
+          alt="Card"
+          width={550}
+          height={550}
+          className="h-auto w-80 md:w-full"
+        />
+      </MotionTransition>
+    </div>
+  </div>
+)
+
 }

@@ -11,28 +11,28 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
    const whatsappNumber = "34690151736"; // tu número
-  const text = `¡Hola! 😄\n" Me quería poner en contacto con vosotros porque... "\n¡Espero tu respuesta pronto! 🚀`;
+  const text = `¡Hola! 😄\nMe quería poner en contacto con vosotros porque... \n¡Espero tu respuesta pronto! 🚀`;
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
   
   return (
-    <>
-      <div className="relative px-6 py-10 md:py-64 " id="contact">
-        <div className="grid max-w-5xl mx-auto md:grid-cols-2">
-              <div className="mb-12 max-w-[570px] lg:mb-0 mr-4">
+    <div className="flex items-center justify-center">
+      <div className=" px-6 py-10 md:py-18 bg-[#695848] w-5xl rounded-4xl" id="contact">
+        <div className="grid max-w-5xl mx-auto md:grid-cols-2 ">
+              <div className="pl-20 mb-12 max-w-[570px] lg:mb-0 mr-4">
                 <Reveal>
                     <h2 className="text-5xl font-semibold">Contacta con
                         <span className="block text-[#e4a674]"> nosotros</span>
                     </h2>
                 </Reveal>
                 <Reveal>
-                    <p className="max-w-md mt-10"><strong>¿Tienes dudas o necesitas más información?</strong><br/><br/>
+                    <p className="max-w-md mt-20"><strong>¿Tienes dudas o necesitas más información?</strong><br/><br/>
                     ¡Estamos aquí para ayudarte! No dudes en llamarnos o escribirnos. Nuestro equipo está disponible para atenderte de manera rápida y cercana, ya sea por teléfono, correo electrónico o enviándonos un mensaje directo por WhatsApp.<br/><br/>¡Será un placer ayudarte en todo lo que necesites!
                     </p>
                 </Reveal>
               
               </div>
             
-              <div className="relative ">
+              <div className="relative mt-20">
                   <div className="grid items-center justify-center pt-6 md:p-8">
                     {dataContactItems.map(({id, icon, title, description}) => (
                         <Reveal key={id}>
@@ -102,7 +102,7 @@ const Contact = () => {
               </div>
           </div>
       </div>
-    </>
+    </div>
   );
 };
 

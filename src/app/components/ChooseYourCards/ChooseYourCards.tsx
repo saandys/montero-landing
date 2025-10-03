@@ -13,7 +13,7 @@ import { useRef, useEffect, useState } from 'react';
 
 export function ChooseYourCards() {
     return (
-        <div id="other" className="relative px-6 py-20 md:py-64">
+        <div id="other" className="relative px-6 py-20 md:pb-64 md:pt-24 bg-[#674321]">
 
             <div className="grid max-w-5xl mx-auto md:grid md:grid-cols-2">
                 <div>
