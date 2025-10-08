@@ -15,8 +15,8 @@ const Contact = () => {
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
   
   return (
-    <div className="flex items-center justify-center">
-      <div className=" px-6 py-10 md:py-18 bg-[#695848] w-5xl rounded-4xl" id="contact">
+    <div className="flex items-center justify-center m-9 ">
+      <div className=" px-6 py-10 md:py-18 bg-[#946D47] w-5xl rounded-4xl" id="contact">
         <div className="grid max-w-5xl mx-auto md:grid-cols-2 ">
               <div className="pl-20 mb-12 max-w-[570px] lg:mb-0 mr-4">
                 <Reveal>
@@ -37,7 +37,7 @@ const Contact = () => {
                     {dataContactItems.map(({id, icon, title, description}) => (
                         <Reveal key={id}>
                         <div className="my-5 flex w-full max-w-[370px]">
-                  <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
+                  <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-[#7C543C]/5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     <Image src={`/assets/${icon}.png`} alt={title} width={60} height={60} />
                     
                   </div>

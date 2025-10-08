@@ -10,6 +10,7 @@ import {
 } from "motion/react";
 
 import { useRef, useState } from "react";
+import StaggeredMenu from "../StaggeredMenu";
 
 export const FloatingDock = ({
   items,
@@ -23,7 +24,7 @@ export const FloatingDock = ({
   return (
     <>
       <FloatingDockDesktop items={items} className={desktopClassName} />
-      <FloatingDockMobile items={items} className={mobileClassName} />
+      
     </>
   );
 };
@@ -36,49 +37,65 @@ const FloatingDockMobile = ({
   className?: string;
 }) => {
   const [open, setOpen] = useState(false);
+  
+const menuItems = [
+
+  { label: 'Home', ariaLabel: 'Go to home page', link: '/' },
+
+  { label: 'About', ariaLabel: 'Learn about us', link: '/about' },
+
+  { label: 'Services', ariaLabel: 'View our services', link: '/services' },
+
+  { label: 'Contact', ariaLabel: 'Get in touch', link: '/contact' }
+
+];
+
+
+const socialItems = [
+
+  { label: 'Twitter', link: 'https://twitter.com' },
+
+  { label: 'GitHub', link: 'https://github.com' },
+
+  { label: 'LinkedIn', link: 'https://linkedin.com' }
+
+];
   return (
-    <div className={cn("relative block md:hidden", className)}>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2"
-          >
-            {items.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
-              >
-                <a
-                  href={item.href}
-                  key={item.title}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-[#866545]"
-                >
-                  <div className="h-4 w-4">{item.icon}</div>
-                </a>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-[#866545]"
-      >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
-      </button>
+    <div>
+      
+<div style={{ height: '100vh', background: '#1a1a1a' }}>
+
+  <StaggeredMenu
+
+    position="right"
+
+    items={menuItems}
+
+    socialItems={socialItems}
+
+    displaySocials={true}
+
+    displayItemNumbering={true}
+
+    menuButtonColor="#fff"
+
+    openMenuButtonColor="#fff"
+
+    changeMenuColorOnOpen={true}
+
+    colors={['#B19EEF', '#5227FF']}
+
+    logoUrl="/path-to-your-logo.svg"
+
+    accentColor="#ff6b6b"
+
+    onMenuOpen={() => console.log('Menu opened')}
+
+    onMenuClose={() => console.log('Menu closed')}
+
+  />
+
+</div>
     </div>
   );
 };

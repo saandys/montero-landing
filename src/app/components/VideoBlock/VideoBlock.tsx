@@ -11,7 +11,7 @@ import { MotionTransition } from '../MotionTransition'
 export default function VideoBlock() {
     return (
         <MotionTransition>
-        <div className="relative h-110 bg-[#674321]" id="servicios">
+        <div className="relative h-110" id="servicios">
             
   <video
     src="/assets/video_repair.mp4"

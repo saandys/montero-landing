@@ -9,7 +9,7 @@ import { MotionTransition } from "../MotionTransition"
 
 export default function CounterData() {
   return (
-    <div className="bg-[#f6d5b9] w-full py-10 md:py-24"> {/* Fondo rectangular */}
+    <div className="bg-[#946D47] w-full py-10 md:py-24"> {/* Fondo rectangular */}
   <MotionTransition className="max-w-5xl mx-auto">
     <div className="justify-between md:flex">
       {dataCounter.map(({ id, startNumber, endNumber, text }) => (
@@ -42,11 +42,11 @@ interface CounterItemProps {
       <div ref={ref} className="py-3 text-2xl text-center md:text-left">
         +
         {isInView ? (
-          <CountUp start={startNumber} end={endNumber} duration={1.5} className="text-[#ddae7c]"/>
+          <CountUp start={startNumber} end={endNumber} duration={1.5} className="text-[#FFF5E0]"/>
         ) : (
           startNumber
         )}{" "}
-        <span className="degradedBlue text-[#5b4329]">{text}</span>
+        <span className="degradedBlue text-[#2F1D0C]">{text}</span>
       </div>
     );
   }

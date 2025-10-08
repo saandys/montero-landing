@@ -82,9 +82,8 @@ export function Header() {
                     </div>
                 </div>
             </nav>*/}
-            <div className="flex items-center justify-center h-20 w-full my-7">
+            <div className="flex items-center justify-center md:h-20 w-full my-7">
       <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
         items={links}
       />
     </div>

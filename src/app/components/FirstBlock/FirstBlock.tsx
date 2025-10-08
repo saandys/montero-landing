@@ -4,16 +4,17 @@ import { BackgroundRadialRight } from "../BackgroundRadialRight";
 import { MotionTransition } from "../MotionTransition";
 import Image from "next/image";
 import { Reveal } from "../Reveal";
-import { Dynalight, Gasoek_One } from 'next/font/google'
+import { Dynalight, Gasoek_One, Ms_Madi, Send_Flowers, Yellowtail } from 'next/font/google'
 import Silk from "@/components/Silk";
+import ShinyText from "@/components/ShinyText";
 
-const dynalight = Dynalight({ subsets: ['latin'], weight: '400' })
+const dynalight = Ms_Madi({ subsets: ['latin'], weight: '400' })
 const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
 
 
 export function FirstBlock() {
    return (
-  <div id="home" className="relative w-full h-screen p-4 overflow-hidden">
+  <div id="home" className="relative w-full md:h-screen p-4 overflow-hidden">
     {/* Fondo animado */}
    
    
@@ -41,7 +42,19 @@ export function FirstBlock() {
         <Reveal>
           <div className="my-8">
             <Link href="#contact" className="px-4 py-3 rounded-md bg-[#83552d]">
-              Solicita tu reparación
+                
+
+<ShinyText
+
+  text="Solicita tu reparación!" 
+
+  disabled={false} 
+
+  speed={3} 
+
+  className='custom-class' 
+
+/>
             </Link>
           </div>
         </Reveal>

@@ -6,19 +6,19 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCards } from "swiper/modules"
 import { dataCards } from "./ChooseYourCards.data";
 import Image from "next/image";
-import 'swiper/css'
-import 'swiper/css/effect-cards'
 import { useRef, useEffect, useState } from 'react';
+import { Gasoek_One } from "next/font/google";
 
+const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
 
 export function ChooseYourCards() {
     return (
-        <div id="other" className="relative px-6 py-20 md:pb-64 md:pt-24 bg-[#674321]">
+        <div id="other" className="relative px-6 py-20 md:pb-64 md:pt-24">
 
             <div className="grid max-w-5xl mx-auto md:grid md:grid-cols-2">
                 <div>
                   <Reveal>
-                    <h2 className="text-5xl font-semibold">  <span className=" text-[#e4a674]">Más allá</span> de <br/>
+                    <h2 className={`text-5xl font-semibold ${gasoekOne.className}`}>  <span className=" text-[#e4a674]">Más allá</span> de <br/>
                        los  zapatos
                         
                     </h2>
