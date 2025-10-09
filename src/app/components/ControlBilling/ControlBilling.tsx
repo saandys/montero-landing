@@ -3,6 +3,10 @@
 import Image from "next/image"
 import { MotionTransition } from "../MotionTransition"
 import { Reveal } from "../Reveal"
+import { Gasoek_One } from "next/font/google"
+
+const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
+
 
 export function ControlBilling(){
     return (
@@ -14,7 +18,7 @@ export function ControlBilling(){
             <div className="flex flex-col h-full">
               <div className="-m-1.5 overflow-x-auto">
                 <div className="overflow-x-auto py-8 px-4 h-full">
-                  <div className="min-w-full max-w-3xl mx-auto shadow-lg rounded-2xl border border-[#e6cbb5] bg-[#e6cbb5] overflow-hidden h-full">
+                  <div className="min-w-full max-w-3xl mx-auto shadow-lg rounded-2xl border border-[#e4a674] bg-white/90 overflow-hidden h-full">
                     <table className="min-w-full text-sm text-left font-light">
                       <thead className="bg-[#e4a674] text-[#5a4332] uppercase tracking-wider text-xs">
                         <tr>
@@ -52,7 +56,7 @@ export function ControlBilling(){
           {/* Columna derecha: texto + imagen */}
           <div className="flex-1 p-6 md:p-8 flex flex-col h-full">
             <Reveal>
-              <h2 className="text-5xl font-semibold">
+              <h2 className={`text-5xl font-semibold ${gasoekOne.className}`}>
                 <span className="text-[#e4a674]">Calidad artesanal</span> <br /> al mejor precio
               </h2>
             </Reveal>

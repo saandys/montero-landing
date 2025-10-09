@@ -42,13 +42,13 @@ const Home = () => {
 
 
 const socialItems = [
-
+/*
   { label: 'Twitter', link: 'https://twitter.com' },
 
   { label: 'GitHub', link: 'https://github.com' },
 
   { label: 'LinkedIn', link: 'https://linkedin.com' }
-
+*/
 ];
 
     return (
@@ -73,15 +73,15 @@ const socialItems = [
     <StaggeredMenu
       position="right"
       items={menuItems}
-      socialItems={socialItems}
+      socialItems={[]}
       displaySocials={true}
       displayItemNumbering={true}
       menuButtonColor="#fff"
-      openMenuButtonColor="#fff"
+      openMenuButtonColor="#000"
       changeMenuColorOnOpen={true}
-      colors={['#B19EEF', '#5227FF']}
-      logoUrl="/path-to-your-logo.svg"
-      accentColor="#ff6b6b"
+      colors={['#7C543C', '#946D47']}
+      logoUrl=""
+      accentColor="#603d1c"
       onMenuOpen={() => {console.log('Menu opened'); document.body.style.overflow = 'hidden'; }}
       onMenuClose={() => console.log('Menu closed')}
     />

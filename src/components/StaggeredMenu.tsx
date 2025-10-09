@@ -372,18 +372,25 @@ style={
       </div>
       <header className="staggered-menu-header" aria-label="Main navigation header">
         <div className="sm-logo" aria-label="Logo">
-          <img
+          {logoUrl != '' && <img
             src={logoUrl || '/src/assets/logos/reactbits-gh-white.svg'}
-            alt="Logo"
-            className="sm-logo-img"
+            alt=""
+            className="md-logo-img"
             draggable={false}
-            width={110}
-            height={24}
-          />
+            width={210}
+            height={54}
+          />}
+          
         </div>
         <button
           ref={toggleBtnRef}
-          className="sm-toggle"
+          className={`
+    group relative flex items-center gap-2 px-5 py-3 rounded-full
+    border transition-all duration-300
+    ${open 
+      ? 'bg-white text-black border-white' 
+      : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
+  `}
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
           aria-controls="staggered-menu-panel"
@@ -403,6 +410,12 @@ style={
             <span ref={plusHRef} className="sm-icon-line" />
             <span ref={plusVRef} className="sm-icon-line sm-icon-line-v" />
           </span>
+          {!open && (
+    <span
+      className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#B19EEF]/30 to-[#5227FF]/30 opacity-0 group-hover:opacity-100 blur-md transition-opacity"
+      aria-hidden="true"
+    />
+  )}
         </button>
       </header>
 
