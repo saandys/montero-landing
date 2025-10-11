@@ -14,29 +14,34 @@ import Contact from "./components/Contact/Contact";
 import Silk from "@/components/Silk";
 import Aurora from "@/components/Aurora";
 import StaggeredMenu from "@/components/StaggeredMenu";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const ClientOnlySilk = (props: React.ComponentProps<typeof Silk>) => {
-  const [isClient, setIsClient] = useState(false);
+// --- ClientOnly wrapper ---
+const ClientOnly = ({ children }: { children: React.ReactNode }) => {
+  const [isClient, setIsClient] = useState(false)
+  useEffect(() => setIsClient(true), [])
+  if (!isClient) return null
+  return <>{children}</>
+}
+
+// --- LazyLoad wrapper ---
+const LazyLoad = ({ children, rootMargin = "200px 0px", threshold = 0 }: { children: React.ReactNode, rootMargin?: string, threshold?: number }) => {
+  const ref = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    if (!ref.current) return
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) setIsVisible(true) },
+      { rootMargin, threshold }
+    )
+    observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [ref, rootMargin, threshold])
 
-  if (!isClient) return null;
-  return <Silk {...props} />;
-};
+  return <div ref={ref}>{isVisible ? children : null}</div>
+}
 
-const ClientOnlyAurora = (props: React.ComponentProps<typeof Aurora>) => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) return null;
-  return <Aurora {...props} />;
-};
 
 const roboto = Inter ({
   weight: '400',
@@ -97,11 +102,12 @@ const socialItems = [
         </div>
         <div  className="min-h-screen text-[#f3ebe2]"
        >
-         
+          <LazyLoad>
          <div className="relative w-full h-full">
             {/* Silk como fondo */}
             <div  className="absolute inset-0 -z-10">
-              <ClientOnlySilk
+               <ClientOnly>
+              <Silk
                 speed={5}
                 scale={1}
                 color="#674321"
@@ -109,6 +115,7 @@ const socialItems = [
                 rotation={0}
               
               />
+              </ClientOnly>
             </div>
             {/* Contenido encima del fondo */}
             <div className="relative z-10">
@@ -117,14 +124,17 @@ const socialItems = [
               <FirstBlock />
             </div>
           </div>
+          </LazyLoad>
 
 
         
         
           <CounterData />
+               <LazyLoad>
         <div className="bg-[#180e05] relative  w-full h-full">
           <div  className="absolute w-full h-full">
-             <ClientOnlyAurora
+             <ClientOnly>
+             <Aurora
 
           colorStops={["#7C543C", "#603d1c", "#946D47"]}
 
@@ -135,12 +145,13 @@ const socialItems = [
           speed={0.5}
 
         />
+        </ClientOnly>
           </div>
 
        
          <BestBusiness />
          </div>
-        
+             </LazyLoad>
           {/* VideoBlock con fondo dividido */}
           <div className="relative w-full">
             {/* Fondo con degradado */}
@@ -153,22 +164,27 @@ const socialItems = [
               }}
             />
 
+ <LazyLoad>
             {/* Video por encima */}
             <div className="relative z-10">
               <VideoBlock />
             </div>
+            </LazyLoad>
           </div>
- 
+  <LazyLoad>
            <div className="bg-[#946D47]  relative z-10">
          <ChooseYourCards />
  
         </div>
+        </LazyLoad>
+          <LazyLoad>
           <div className="bg-[#180e05]  relative z-10">
               <ControlBilling />
             <Contact />
             
          <Footer /> 
     </div>
+    </LazyLoad>
          {/* <PaymentMethods /> */}
 
         </div>

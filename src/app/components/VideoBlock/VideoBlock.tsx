@@ -10,49 +10,42 @@ import { MotionTransition } from '../MotionTransition'
 import { ReactNode, useEffect, useRef, useState } from 'react'
 
 
-type LazyLoadProps = {
-  children: ReactNode;
-  rootMargin?: string;
-  threshold?: number;
-};
 
-export const LazyLoad = ({ children, rootMargin = "0px", threshold = 0.1 }: LazyLoadProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
+type LazyLoadProps = {
+  children: React.ReactNode
+  rootMargin?: string
+  threshold?: number
+}
+
+const LazyLoad = ({ children, rootMargin = "200px 0px", threshold = 0 }: LazyLoadProps) => {
+  const ref = useRef<HTMLDivElement>(null)
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    if (!ref.current) return;
-
+    if (!ref.current) return
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
+        if (entry.isIntersecting) setIsVisible(true)
       },
       { rootMargin, threshold }
-    );
+    )
+    observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [ref, rootMargin, threshold])
 
-    observer.observe(ref.current);
+  return <div ref={ref}>{isVisible ? children : null}</div>
+}
 
-    return () => observer.disconnect();
-  }, [ref, rootMargin, threshold]);
-
-  return <div ref={ref}>{isVisible ? children : null}</div>;
-};
-
-
-type ClientOnlyProps = {
-  children: ReactNode;
-};
-
-export const ClientOnly = ({ children }: ClientOnlyProps) => {
-  const [isClient, setIsClient] = useState(false);
+const ClientOnly = ({ children }: { children: React.ReactNode }) => {
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
-    setIsClient(true);
-  }, []);
+    setIsClient(true)
+  }, [])
 
-  if (!isClient) return null;
-  return <>{children}</>;
-};
+  if (!isClient) return null
+  return <>{children}</>
+}
 
 export default function VideoBlock() {
     return (
@@ -66,6 +59,7 @@ export default function VideoBlock() {
     autoPlay
     loop
     muted
+    playsInline
     className="w-full h-full object-cover opacity-45"
     style={{
       WebkitMaskImage: "url('/assets/mask7.png')",
