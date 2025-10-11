@@ -101,7 +101,7 @@ const socialItems = [
         
           <CounterData />
         <div className="bg-[#180e05] relative  w-full h-full">
-          <div  className="absolute w-full h-full">
+          <div  className="absolute w-full h-full "  style={{ willChange: 'transform' }}>
              <Aurora
 
           colorStops={["#7C543C", "#603d1c", "#946D47"]}
