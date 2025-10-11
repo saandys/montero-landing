@@ -8,58 +8,46 @@ import { useState } from "react"
 import {MotionTransition} from "../MotionTransition/"
 import { FloatingDock } from "@/components/ui/floating-dock";
 import { Text } from "lucide-react"
+import { Icon12Hours, IconBasketDollar, IconBrandSnowflake, IconHome, IconPhone, IconTool, IconTools } from "@tabler/icons-react"
 
 export function Header() {
     const [openMobileMenu, setOpenMobileMenu] = useState(false)
   const links = [
     {
-      title: "Home",
+      title: "Inicio",
       icon: (
-        <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Contacto"
-        />
+       <IconHome></IconHome>
       ),
-      href: "#",
+      href: "#home",
     },
  
     {
-      title: "Products",
+      title: "Servicios",
       icon: (
-        <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
+        <IconTool></IconTool>
       ),
-      href: "#",
+      href: "#services",
     },
     {
-      title: "Components",
+      title: "Especial",
       icon:(
-        <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
+        <IconBrandSnowflake></IconBrandSnowflake>
       ),
-      href: "#",
+      href: "#other",
     },
     {
-      title: "Aceternity UI",
+      title: "Tarifas",
       icon: (
-        <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
-          alt="Aceternity Logo"
-        />
+       <IconBasketDollar></IconBasketDollar>
       ),
-      href: "#",
+      href: "#prices",
+    },
+    {
+      title: "Contacto",
+      icon: (
+       <IconPhone></IconPhone>
+      ),
+      href: "#contact",
     },
    
   ];
@@ -82,7 +70,7 @@ export function Header() {
                     </div>
                 </div>
             </nav>*/}
-            <div className="flex items-center justify-center md:h-20 w-full my-7">
+            <div className="lg:flex hidden items-center justify-center md:h-20 w-full pt-7">
       <FloatingDock
         items={links}
       />

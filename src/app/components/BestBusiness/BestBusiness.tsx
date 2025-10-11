@@ -16,8 +16,8 @@ export function BestBusiness() {
                 <div>
                     <Reveal>
                         <h2 className={`text-5xl font-semibold ${gasoekOne.className}`}>
-                            <span className="block text-[#e4a674] ">Mucho más</span>
-                            que reparación de calzado
+                            <span className=" text-[#e4a674] ">Más que </span>
+                            una <span className="text-[#e4a674] ">zapatería</span>, un <br/>taller artesanal
                         </h2>
                     </Reveal>
                     <Reveal>

@@ -20,8 +20,8 @@ const Contact = () => {
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
   
   return (
-    <div className="flex items-center justify-center m-9 ">
-      <div className=" px-6 py-10 md:py-18 bg-[#946D47] w-5xl rounded-4xl" id="contact">
+    <div className="flex items-center justify-center m-9 "  id="contact">
+      <div className=" px-6 py-10 md:py-18 bg-[#946D47] w-5xl rounded-4xl">
         <div className="grid max-w-5xl mx-auto md:grid-cols-2 ">
               <div className="pl-10 md:mt-0 mt-5 md:pl-20 mb-12 max-w-[570px] lg:mb-0 mr-4">
                 <Reveal>

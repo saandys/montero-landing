@@ -14,7 +14,7 @@ const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
 
 export function FirstBlock() {
    return (
-  <div id="home" className="relative w-full md:h-screen p-4 overflow-hidden">
+  <div id="home" className="relative w-full md:h-screen p-4 overflow-hidden lg:pt-8 pt-20">
     {/* Fondo animado */}
    
    

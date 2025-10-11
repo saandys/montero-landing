@@ -15,13 +15,13 @@ const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
 
 export function ChooseYourCards() {
     return (
-        <div id="other" className="relative px-6 py-20 md:pb-64 md:pt-24">
+         <div id="other" className="p-4 py-20 md:py-34    overflow-hidden">
 
             <div className="grid max-w-5xl mx-auto md:grid md:grid-cols-2">
-                <div>
+                 <div>
                   <Reveal>
-                    <h2 className={`text-5xl font-semibold ${gasoekOne.className}`}>  <span className=" text-[#180e05]">Más allá</span> de <br/>
-                       los  zapatos
+                    <h2 className={`text-5xl font-semibold whitespace-normal ${gasoekOne.className}`}>  <span className=" text-[#180e05] block">Creaciones hechas a mano </span>
+                       para momentos especiales
                         
                     </h2>
                 </Reveal>
@@ -38,6 +38,7 @@ export function ChooseYourCards() {
                 h-[180px]       
                 sm:max-w-[320px] sm:h-[220px] 
                 md:max-w-[400px] md:h-[250px]
+             
               ">
                 <MotionTransition>
                   <Swiper

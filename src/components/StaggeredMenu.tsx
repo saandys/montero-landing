@@ -260,6 +260,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
       }
     });
     document.body.style.overflow = 'auto';
+    setOpen(false);
   }, [position]);
 
   const animateIcon = useCallback((opening: boolean) => {
@@ -351,7 +352,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
 
   return (
     <div
-      className={(className ? className + ' ' : '') + 'staggered-menu-wrapper' + (isFixed ? ' fixed-wrapper' : '')}
+      className={ (open ? ' pointer-events-auto ' : ' pointer-events-none ') + (className ? className + ' ' : '') + 'staggered-menu-wrapper' + (isFixed ? ' fixed-wrapper' : '')}
 style={
     accentColor
       ? { ['--sm-accent']: accentColor } as CSSProperties
@@ -371,7 +372,7 @@ style={
         })()}
       </div>
       <header className="staggered-menu-header" aria-label="Main navigation header">
-        <div className="sm-logo" aria-label="Logo">
+        <div className={` sm-logo`} aria-label="Logo">
           {logoUrl != '' && <img
             src={logoUrl || '/src/assets/logos/reactbits-gh-white.svg'}
             alt=""
@@ -426,7 +427,7 @@ style={
               items.map((it, idx) => (
                 <li className="sm-panel-itemWrap" key={it.label + idx}>
                   <a className="sm-panel-item" href={it.link} aria-label={it.ariaLabel} data-index={idx + 1} onClick={(e) => {
-    playClose();
+   toggleMenu()
   }}>
                     <span className="sm-panel-itemLabel">{it.label}</span>
                   </a>
