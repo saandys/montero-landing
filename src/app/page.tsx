@@ -78,7 +78,7 @@ const socialItems = [
          
          <div className="relative w-full h-full">
             {/* Silk como fondo */}
-            <div  className="absolute inset-0 -z-10">
+            <div  className="fixed top-0 left-0 w-full h-screen -z-10 pointer-events-none">
               <Silk
                 speed={5}
                 scale={1}
