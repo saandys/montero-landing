@@ -16,6 +16,28 @@ import Aurora from "@/components/Aurora";
 import StaggeredMenu from "@/components/StaggeredMenu";
 import { useEffect, useState } from "react";
 
+const ClientOnlySilk = (props: React.ComponentProps<typeof Silk>) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+  return <Silk {...props} />;
+};
+
+const ClientOnlyAurora = (props: React.ComponentProps<typeof Aurora>) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+  return <Aurora {...props} />;
+};
+
 const roboto = Inter ({
   weight: '400',
   subsets: ['latin'],
@@ -78,8 +100,8 @@ const socialItems = [
          
          <div className="relative w-full h-full">
             {/* Silk como fondo */}
-            <div  className="fixed top-0 left-0 w-full h-screen -z-10 pointer-events-none">
-              <Silk
+            <div  className="absolute inset-0 -z-10">
+              <ClientOnlySilk
                 speed={5}
                 scale={1}
                 color="#674321"
@@ -101,8 +123,8 @@ const socialItems = [
         
           <CounterData />
         <div className="bg-[#180e05] relative  w-full h-full">
-          <div  className="absolute w-full h-full "  style={{ willChange: 'transform' }}>
-             <Aurora
+          <div  className="absolute w-full h-full">
+             <ClientOnlyAurora
 
           colorStops={["#7C543C", "#603d1c", "#946D47"]}
 

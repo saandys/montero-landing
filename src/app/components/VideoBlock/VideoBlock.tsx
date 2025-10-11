@@ -7,9 +7,57 @@ import Image from 'next/image'
 import { Autoplay } from 'swiper/modules'
 import { CtaDark } from '../CtaDark'
 import { MotionTransition } from '../MotionTransition'
+import { ReactNode, useEffect, useRef, useState } from 'react'
+
+
+type LazyLoadProps = {
+  children: ReactNode;
+  rootMargin?: string;
+  threshold?: number;
+};
+
+export const LazyLoad = ({ children, rootMargin = "0px", threshold = 0.1 }: LazyLoadProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { rootMargin, threshold }
+    );
+
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, [ref, rootMargin, threshold]);
+
+  return <div ref={ref}>{isVisible ? children : null}</div>;
+};
+
+
+type ClientOnlyProps = {
+  children: ReactNode;
+};
+
+export const ClientOnly = ({ children }: ClientOnlyProps) => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) return null;
+  return <>{children}</>;
+};
 
 export default function VideoBlock() {
     return (
+      <LazyLoad>
+      <ClientOnly>
         <MotionTransition>
         <div className="relative h-110" id="servicios">
             
@@ -32,6 +80,7 @@ export default function VideoBlock() {
 
 </div>
 </MotionTransition>
-   
+   </ClientOnly>
+   </LazyLoad>
     )
 }

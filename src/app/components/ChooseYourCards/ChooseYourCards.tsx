@@ -8,13 +8,42 @@ import { dataCards } from "./ChooseYourCards.data";
 import Image from "next/image";
 import 'swiper/css'
 import 'swiper/css/effect-cards'
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, ReactNode } from 'react';
 import { Gasoek_One } from "next/font/google";
 
 const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
 
+
+type LazyLoadProps = {
+  children: ReactNode;
+  rootMargin?: string;
+  threshold?: number;
+};
+
+export const LazyLoad = ({ children, rootMargin = "0px", threshold = 0.1 }: LazyLoadProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    if (!ref.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) setIsVisible(true);
+      },
+      { rootMargin, threshold }
+    );
+
+    observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, [ref, rootMargin, threshold]);
+
+  return <div ref={ref}>{isVisible ? children : null}</div>;
+};
 export function ChooseYourCards() {
     return (
+      <LazyLoad>
          <div id="other" className="p-4 py-20 md:py-34    overflow-hidden">
 
             <div className="grid max-w-5xl mx-auto md:grid md:grid-cols-2">
@@ -69,5 +98,6 @@ export function ChooseYourCards() {
               </div>
             </div>
         </div>
+      </LazyLoad>
     )
 }

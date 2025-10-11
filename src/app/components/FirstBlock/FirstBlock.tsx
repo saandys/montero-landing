@@ -40,21 +40,19 @@ export function FirstBlock() {
           </p>
         </Reveal>
         <Reveal>
-          <div className="my-8">
+          <div className="my-8 ">
             <Link href="#contact" className="px-4 py-3 rounded-md bg-[#83552d]">
-                
+              <ShinyText
 
-<ShinyText
+                text="Solicita tu reparación!" 
 
-  text="Solicita tu reparación!" 
+                disabled={false} 
 
-  disabled={false} 
+                speed={3} 
 
-  speed={3} 
+                className='custom-class' 
 
-  className='custom-class' 
-
-/>
+              />
             </Link>
           </div>
         </Reveal>
