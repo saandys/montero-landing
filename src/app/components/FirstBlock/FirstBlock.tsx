@@ -60,7 +60,7 @@ export function FirstBlock() {
 
       <MotionTransition className="flex items-center">
         <Image
-          src="/assets/home_image.png"
+          src="/images/home_image.png"
           alt="Card"
           width={550}
           height={550}

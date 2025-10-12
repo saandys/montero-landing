@@ -55,18 +55,18 @@ export default function VideoBlock() {
         <div className="relative h-110" id="servicios">
             
   <video
-    src="/assets/video_repair.mp4"
+    src="/images/video_repair.mp4"
     autoPlay
     loop
     muted
     playsInline
     className="w-full h-full object-cover opacity-45"
     style={{
-      WebkitMaskImage: "url('/assets/mask7.png')",
+      WebkitMaskImage: "url('/images/mask7.png')",
       WebkitMaskRepeat: "no-repeat",
       WebkitMaskSize: "cover",
       WebkitMaskPosition: "center",
-      maskImage: "url('/assets/mask7.png')",
+      maskImage: "url('/images/mask7.png')",
       maskRepeat: "no-repeat",
       maskSize: "100% 100%",
     }}
