@@ -11,7 +11,7 @@ const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
 export function ControlBilling(){
     return (
         <div id="prices" className="p-4 py-20 md:py-34">
-        <div className="flex flex-col-reverse md:flex-row max-w-5xl mx-auto place-content-evenly items-stretch">
+        <div className="flex flex-col-reverse md:flex-row max-w-7xl mx-auto place-content-evenly items-stretch">
           
           {/* Columna izquierda: tabla */}
           <MotionTransition className="flex-1 p-6 md:p-8">

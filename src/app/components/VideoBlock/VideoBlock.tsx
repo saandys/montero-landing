@@ -11,46 +11,10 @@ import { ReactNode, useEffect, useRef, useState } from 'react'
 
 
 
-type LazyLoadProps = {
-  children: React.ReactNode
-  rootMargin?: string
-  threshold?: number
-}
-
-const LazyLoad = ({ children, rootMargin = "200px 0px", threshold = 0 }: LazyLoadProps) => {
-  const ref = useRef<HTMLDivElement>(null)
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    if (!ref.current) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true)
-      },
-      { rootMargin, threshold }
-    )
-    observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [ref, rootMargin, threshold])
-
-  return <div ref={ref}>{isVisible ? children : null}</div>
-}
-
-const ClientOnly = ({ children }: { children: React.ReactNode }) => {
-  const [isClient, setIsClient] = useState(false)
-
-  useEffect(() => {
-    setIsClient(true)
-  }, [])
-
-  if (!isClient) return null
-  return <>{children}</>
-}
 
 export default function VideoBlock() {
     return (
-      <LazyLoad>
-      <ClientOnly>
+     
         <MotionTransition>
         <div className="relative h-110" id="servicios">
             
@@ -74,7 +38,6 @@ export default function VideoBlock() {
 
 </div>
 </MotionTransition>
-   </ClientOnly>
-   </LazyLoad>
+
     )
 }

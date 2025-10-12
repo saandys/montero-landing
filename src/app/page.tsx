@@ -80,10 +80,15 @@ const socialItems = [
 */
 ];
 
+ const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true); // asegura que esto solo se haga en cliente
+  }, []);
     return (
 
       <main className={markazi.className}>
-         <div className={`fixed inset-0 z-[1000] lg:hidden ${menuMobileOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+         {mounted && <div className={`fixed inset-0 z-[1000] lg:hidden ${menuMobileOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
           <StaggeredMenu
             position="right"
             items={menuItems}
@@ -98,15 +103,16 @@ const socialItems = [
             accentColor="#603d1c"
             onMenuOpen={() => {setMenuMobileOpen(true)  }}
             onMenuClose={() => {setMenuMobileOpen(false)}}
+            isOpen={false}
           />
-        </div>
+        </div> }
         <div  className="min-h-screen text-[#f3ebe2]"
        >
-          <LazyLoad>
+          
          <div className="relative w-full h-full">
             {/* Silk como fondo */}
-            <div  className="absolute inset-0 -z-10">
-               <ClientOnly>
+            <div  className="absolute hidden md:block inset-0 -z-10">
+              
               <Silk
                 speed={5}
                 scale={1}
@@ -115,25 +121,23 @@ const socialItems = [
                 rotation={0}
               
               />
-              </ClientOnly>
             </div>
             {/* Contenido encima del fondo */}
             <div className="relative z-10">
-              
+                <div   className="min-h-screen p-2 text-[#f3ebe2] 
+             bg-[#674321] bg-[url('/images/dark-leather.png')] bg-repeat bg-auto bg-blend-overlay
+             md:bg-none md:bg-transparent">
               <Header />
               <FirstBlock />
+              </div>
             </div>
           </div>
-          </LazyLoad>
-
-
         
         
           <CounterData />
-               <LazyLoad>
         <div className="bg-[#180e05] relative  w-full h-full">
-          <div  className="absolute w-full h-full">
-             <ClientOnly>
+          <div  className="absolute hidden md:block w-full h-full">
+           
              <Aurora
 
           colorStops={["#7C543C", "#603d1c", "#946D47"]}
@@ -145,13 +149,15 @@ const socialItems = [
           speed={0.5}
 
         />
-        </ClientOnly>
           </div>
 
-       
+  {/* 🌤️ Sombra marrón clara SOLO visible en móvil */}
+   <div className="absolute top-0 left-0 w-full h-40 md:hidden pointer-events-none z-10">
+    <div className=" md:hidden w-full h-full bg-gradient-to-b from-[#b58a61]/60 to-transparent rounded-b-full blur-3xl"></div>
+  </div>
+  
          <BestBusiness />
          </div>
-             </LazyLoad>
           {/* VideoBlock con fondo dividido */}
           <div className="relative w-full">
             {/* Fondo con degradado */}
@@ -164,27 +170,25 @@ const socialItems = [
               }}
             />
 
- <LazyLoad>
             {/* Video por encima */}
             <div className="relative z-10">
               <VideoBlock />
             </div>
-            </LazyLoad>
           </div>
-  <LazyLoad>
            <div className="bg-[#946D47]  relative z-10">
          <ChooseYourCards />
  
         </div>
-        </LazyLoad>
-          <LazyLoad>
+        
           <div className="bg-[#180e05]  relative z-10">
+               <div className="absolute top-0 left-0 w-full h-40 md:hidden pointer-events-none z-10">
+    <div className=" md:hidden w-full h-full bg-gradient-to-b from-[#b58a61]/60 to-transparent rounded-b-full blur-3xl"></div>
+  </div>
               <ControlBilling />
             <Contact />
             
          <Footer /> 
     </div>
-    </LazyLoad>
          {/* <PaymentMethods /> */}
 
         </div>

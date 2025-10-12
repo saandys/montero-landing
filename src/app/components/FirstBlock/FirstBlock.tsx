@@ -14,16 +14,16 @@ const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
 
 export function FirstBlock() {
    return (
-  <div id="home" className="relative w-full md:h-screen p-4 overflow-hidden lg:pt-8 pt-20">
+  <div id="home" className="relative flex items-center justify-center w-full md:h-screen p-4 overflow-hidden lg:pt-8 pt-20">
     {/* Fondo animado */}
    
    
 
     {/* Contenido principal */}
-    <div className="grid max-w-5xl mx-auto md:grid-cols-2 relative z-10">
-      <div>
+    <div className="grid max-w-6xl mx-auto md:grid-cols-2 relative z-10">
+      <div className="flex flex-col justify-center">
         <Reveal>
-          <h1 className={`text-7xl font-semibold ${gasoekOne.className}`}>
+          <h1 className={`md:text-7xl text-6xl font-semibold ${gasoekOne.className}`}>
             Tu zapatería <br /> de <span className="text-[#e4a674]">toda la vida</span>
           </h1>
         </Reveal>
@@ -58,7 +58,7 @@ export function FirstBlock() {
         </Reveal>
       </div>
 
-      <MotionTransition className="flex items-center">
+      <MotionTransition className="flex items-center justify-center">
         <img
           src="/images/home_image.png"
           alt="Card"

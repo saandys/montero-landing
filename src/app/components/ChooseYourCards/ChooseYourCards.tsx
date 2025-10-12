@@ -46,10 +46,10 @@ export function ChooseYourCards() {
       <LazyLoad>
          <div id="other" className="p-4 py-20 md:py-34    overflow-hidden">
 
-            <div className="grid max-w-5xl mx-auto md:grid md:grid-cols-2">
+            <div className="grid max-w-7xl mx-auto md:grid md:grid-cols-2">
                  <div>
                   <Reveal>
-                    <h2 className={`text-5xl font-semibold whitespace-normal ${gasoekOne.className}`}>  <span className=" text-[#180e05] block">Creaciones hechas a mano </span>
+                    <h2 className={`text-5xl font-semibold whitespace-normal ${gasoekOne.className}`}>  <span className=" text-[#180e05] block">Creaciones <br/>hechas a mano </span>
                        para momentos especiales
                         
                     </h2>

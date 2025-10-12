@@ -30,6 +30,7 @@ export interface StaggeredMenuProps {
   onMenuOpen?: () => void;
   onMenuClose?: () => void;
   isFixed?: boolean;
+  isOpen: boolean;
 }
 
 export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
@@ -47,9 +48,10 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   accentColor = '#5227FF',
   isFixed = false,
   onMenuOpen,
-  onMenuClose
+  onMenuClose,
+  isOpen = false
 }: StaggeredMenuProps) => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(isOpen);
   const openRef = useRef(false);
   const panelRef = useRef<HTMLDivElement | null>(null);
   const preLayersRef = useRef<HTMLDivElement | null>(null);

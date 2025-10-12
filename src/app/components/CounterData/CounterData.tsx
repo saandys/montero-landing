@@ -11,7 +11,7 @@ import { Playfair_Display } from "next/font/google"
 export default function CounterData() {
   return (
     <div className="bg-[#946D47] w-full py-10 md:py-10"> {/* Fondo rectangular */}
-  <MotionTransition className="max-w-5xl mx-auto">
+  <MotionTransition className="max-w-7xl mx-auto">
     <div className="justify-between md:flex md:m-0 md:p-0 ">
       {dataCounter.map(({ id, startNumber, endNumber, text }) => (
         <CounterItem

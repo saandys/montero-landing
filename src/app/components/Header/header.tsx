@@ -54,7 +54,7 @@ export function Header() {
   
     return (
         <MotionTransition>
-          {/* <nav className="flex flex-wrap items-center justify-between max-w-5xl p-4 mx-auto md:py-8">
+          {/* <nav className="flex flex-wrap items-center justify-between max-w-7xl p-4 mx-auto md:py-8">
                 <Link href="/home" className="flex items-center">
                     <Image src="/images/logo.png" width="150" height="40" alt="Logo"/>
                 </Link>
@@ -70,7 +70,7 @@ export function Header() {
                     </div>
                 </div>
             </nav>*/}
-            <div className="lg:flex hidden items-center justify-center md:h-20 w-full pt-7">
+            <div className="lg:flex hidden items-center justify-center md:h-20 w-full pt-10">
       <FloatingDock
         items={links}
       />

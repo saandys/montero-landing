@@ -12,12 +12,12 @@ export function BestBusiness() {
     return (
         <div id="services" className="relative px-6 pt-10 md:pt-28 md:pb-16">
            
-            <div className="grid max-w-5xl mx-auto md:grid-cols-2">
+            <div className="grid max-w-7xl mx-auto md:grid-cols-2">
                 <div>
                     <Reveal>
                         <h2 className={`text-5xl font-semibold ${gasoekOne.className}`}>
                             <span className=" text-[#e4a674] ">Más que </span>
-                            una <span className="text-[#e4a674] ">zapatería</span>, un <br/>taller artesanal
+                            una <br/> <span className="text-[#e4a674] ">zapatería</span>, un <br/>taller artesanal
                         </h2>
                     </Reveal>
                     <Reveal>
@@ -30,7 +30,7 @@ export function BestBusiness() {
                     {dataFeaturesBusiness.map(({id, icon, title, description}) => (
                         <Reveal key={id}>
                         <div className="grid grid-flow-col gap-5 px-4 py-2 rounded-3xl group hover:bg-[#9f6f45] bg-[#5C3C24] mb-2 transition-colors duration-300">
-                          <Image src={`/images/${icon}.png`} alt={title} width={40} height={40} />
+                          <Image src={`/assets/${icon}.png`} alt={title} width={40} height={40} />
                           <div>
                             <h4 className="text-[#f3ebe2] font-bold">{title}</h4>
                             <p className="text-[#d9cfc4]">{description}</p>
