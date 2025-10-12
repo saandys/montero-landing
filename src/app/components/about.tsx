@@ -16,7 +16,7 @@ const About1 = () => {
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
-          <Image
+          <img
             src="https://shadcnblocks.com/images/block/placeholder-1.svg"
             alt="placeholder"
             className="size-full max-h-96 rounded-2xl object-cover"

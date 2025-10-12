@@ -59,7 +59,7 @@ export function FirstBlock() {
       </div>
 
       <MotionTransition className="flex items-center">
-        <Image
+        <img
           src="/images/home_image.png"
           alt="Card"
           width={550}
