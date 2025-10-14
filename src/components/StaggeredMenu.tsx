@@ -61,7 +61,7 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
   const iconRef = useRef<HTMLSpanElement | null>(null);
   const textInnerRef = useRef<HTMLSpanElement | null>(null);
   const textWrapRef = useRef<HTMLSpanElement | null>(null);
-  const [textLines, setTextLines] = useState<string[]>(['Menu', 'Close']);
+  const [textLines, setTextLines] = useState<string[]>(['Menú', 'Cerrar']);
 
   const openTlRef = useRef<gsap.core.Timeline | null>(null);
   const closeTweenRef = useRef<gsap.core.Tween | null>(null);
@@ -312,13 +312,13 @@ export const StaggeredMenu: React.FC<StaggeredMenuProps> = ({
     if (!inner) return;
     textCycleAnimRef.current?.kill();
 
-    const currentLabel = opening ? 'Menu' : 'Close';
-    const targetLabel = opening ? 'Close' : 'Menu';
+    const currentLabel = opening ? 'Menú' : 'Cerrar';
+    const targetLabel = opening ? 'Cerrar' : 'Menú';
     const cycles = 3;
     const seq: string[] = [currentLabel];
     let last = currentLabel;
     for (let i = 0; i < cycles; i++) {
-      last = last === 'Menu' ? 'Close' : 'Menu';
+      last = last === 'Menú' ? 'Cerrar' : 'Menú';
       seq.push(last);
     }
     if (last !== targetLabel) seq.push(targetLabel);
@@ -389,10 +389,10 @@ style={
           ref={toggleBtnRef}
           className={`
     group relative flex items-center gap-2 px-5 py-3 rounded-full
-    border transition-all duration-300
+    border transition-all duration-300 
     ${open 
       ? 'bg-white text-black border-white' 
-      : 'bg-white/10 text-white border-white/20 hover:bg-white/20'}
+      : 'bg-[#e4a674]/10 text-[#e4a674]/80 border-[#e4a674]/20 hover:bg-[#e4a674]/20'}
   `}
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
@@ -403,22 +403,17 @@ style={
           <span ref={textWrapRef} className="sm-toggle-textWrap" aria-hidden="true">
             <span ref={textInnerRef} className="sm-toggle-textInner">
               {textLines.map((l, i) => (
-                <span className="sm-toggle-line" key={i}>
+                <span className="sm-toggle-line text-[#e4a674]/80" key={i}>
                   {l}
                 </span>
               ))}
             </span>
           </span>
-          <span ref={iconRef} className="sm-icon" aria-hidden="true">
+          <span ref={iconRef} className="sm-icon text-[#e4a674]/80" aria-hidden="true">
             <span ref={plusHRef} className="sm-icon-line" />
             <span ref={plusVRef} className="sm-icon-line sm-icon-line-v" />
           </span>
-          {!open && (
-    <span
-      className="absolute inset-0 rounded-full bg-gradient-to-tr from-[#B19EEF]/30 to-[#5227FF]/30 opacity-0 group-hover:opacity-100 blur-md transition-opacity"
-      aria-hidden="true"
-    />
-  )}
+
         </button>
       </header>
 

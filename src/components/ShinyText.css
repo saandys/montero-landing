@@ -1,16 +1,20 @@
 .shiny-text {
-  color: #b5b5b5a4; /* Adjust this color to change intensity/style */
+  color: #fff4d9; /* Letra crema base */
   background: linear-gradient(
     120deg,
-    rgba(255, 255, 255, 0) 40%,
-    rgba(255, 255, 255, 0.8) 50%,
-    rgba(255, 255, 255, 0) 60%
+    #fff4d9 0%,    /* crema base */
+    #f6e8c3 30%,   /* crema suave */
+    #4b2e05 50%,   /* marrón oscuro brillante */
+    #f6e8c3 70%,   /* crema suave */
+    #fff4d9 100%   /* crema base */
   );
-  background-size: 200% 100%;
+  background-size: 600% 200%;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
   display: inline-block;
-  animation: shine 5s linear infinite;
+  animation: shine 5s ease-in-out infinite;
+  text-shadow: 0 0 12px rgba(255, 244, 217, 0.25);
 }
 
 @keyframes shine {

@@ -15,11 +15,14 @@ export function Footer() {
   <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-5 ">
     <div className="flex justify-center items-center lg:justify-start lg:items-start lg:py-0">
   <Image
-    src="/images/logo.png"
-    width={100}
-    height={20}
-    alt="Montero Sanz"
-  />
+  src="/images/logo.png"
+  width={100}
+  height={20}
+  alt="Montero Sanz"
+  style={{
+    filter: "invert(40%) sepia(40%) saturate(200%) hue-rotate(30deg) brightness(95%) contrast(90%)"
+  }}
+/>
 </div>
 
 

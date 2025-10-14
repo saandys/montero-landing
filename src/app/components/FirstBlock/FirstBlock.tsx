@@ -39,9 +39,12 @@ export function FirstBlock() {
             caminan contigo.
           </p>
         </Reveal>
+        <div className="relative overflow-hidden w-full">
+
+       
         <Reveal>
-          <div className="my-8 ">
-            <Link href="#contact" className="px-4 py-3 rounded-md bg-[#83552d]">
+          <div className="my-8 w-full">
+            <Link href="#contact" className="block w-full px-4 py-3 rounded-md bg-[#7a5737] border-[#fff4d9]">
               <ShinyText
 
                 text="Solicita tu reparación!" 
@@ -56,6 +59,7 @@ export function FirstBlock() {
             </Link>
           </div>
         </Reveal>
+        </div>
       </div>
 
       <MotionTransition className="flex items-center justify-center">
