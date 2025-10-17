@@ -20,7 +20,7 @@ export function Footer() {
   height={20}
   alt="Montero Sanz"
   style={{
-    filter: "invert(40%) sepia(40%) saturate(200%) hue-rotate(30deg) brightness(95%) contrast(90%)"
+    filter: "invert(40%) saturate(200%) hue-rotate(30deg) brightness(95%) contrast(90%)"
   }}
 />
 </div>
@@ -40,7 +40,7 @@ export function Footer() {
                    dark:hover:text-[#e0c6ad] dark:focus:text-[#ac8b6a]
                    p-2 rounded-md transition-colors duration-200
                    bg-[#180e05]/50 hover:bg-[#946D47]/10 lg:bg-transparent lg:hover:bg-transparent"
-        href="#"
+        href={item.link}
       >
         {item.title}
       </a>
@@ -74,10 +74,10 @@ export function Footer() {
   </div>
 
 </footer>
-<hr className="border-t border-[#946D47]/40 my-4">
+<hr className="border-t border-[#946D47]/60 my-4">
 </hr>        <span className="text-center justify-center flex text-sm text-[#946D47] sm:text-center dark:text-[#59422b]">© 2025 Zapateria Montero. All Rights Reserved</span>
 
 </div>
 
-    )
+    ) 
 }

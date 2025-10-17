@@ -82,17 +82,15 @@ export function ChooseYourCards() {
                     }}
                   >
                     {dataCards.map(({ image, id }) => (
-                      <SwiperSlide key={id} className="flex items-center justify-center h-full">
-                        <img
-                          src={image}
-                          alt="Especiales"
-                          width={300}
-                          height={200}
-                          sizes="(max-width: 640px) 240px, (max-width: 768px) 320px, 400px"
-                          className="rounded-md w-full h-auto object-contain"
-                        />
-                      </SwiperSlide>
-                    ))}
+  <SwiperSlide key={id} className="flex items-center justify-center h-full">
+    <img
+      src={image}
+      alt="Especiales"
+      className="rounded-md w-[400px] h-[300px] object-cover"
+    />
+  </SwiperSlide>
+))}
+
                   </Swiper>
                 </MotionTransition>
               </div>

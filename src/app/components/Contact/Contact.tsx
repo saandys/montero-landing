@@ -37,7 +37,7 @@ const Contact = () => {
               
               </div>
             
-              <div className="relative md:mt-20 w-full md:ml-0">
+              <div className="relative md:mt-20 w-full md:ml-0" id="formatos">
                   <div className="grid items-center justify-center pt-6 md:p-8 ">
                     {dataContactItems.map(({id, icon, title, description}) => (
                         <Reveal key={id}>

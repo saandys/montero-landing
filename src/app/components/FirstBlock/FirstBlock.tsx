@@ -44,7 +44,7 @@ export function FirstBlock() {
        
         <Reveal>
           <div className="my-8 w-full">
-            <Link href="#contact" className="block w-full px-4 py-3 rounded-md bg-[#7a5737] border-[#fff4d9]">
+            <Link href="#formatos" className="block Fw-full px-4 py-3 rounded-md bg-[#7a5737] border-[#fff4d9]">
               <ShinyText
 
                 text="Solicita tu reparación!" 
