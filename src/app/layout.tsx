@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Zapatería Montero | Tu zapatería de toda la vida en Catral",
     description: "Dos generaciones dedicadas al arte de la reparación de calzado. Restauramos tus zapatos y artículos de piel con pasión y calidad artesanal.",
-    url: "https://zapateriamontero.com",
+    url: "https://zapateriamontero.es",
     siteName: "Zapatería Montero",
     images: [
       {
-        url: "https://zapateriamontero.com/home_image.png",
+        url: "https://zapateriamontero.es/home_image.png",
         width: 1200,
         height: 630,
         alt: "Zapatería Montero Catral",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://zapateriamontero.com",
+    canonical: "https://zapateriamontero.es",
   },
 };
 
