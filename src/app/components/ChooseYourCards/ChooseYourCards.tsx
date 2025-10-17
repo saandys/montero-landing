@@ -44,7 +44,7 @@ export const LazyLoad = ({ children, rootMargin = "0px", threshold = 0.1 }: Lazy
 export function ChooseYourCards() {
     return (
       <LazyLoad>
-         <div id="other" className="p-4 py-20 md:py-34    overflow-hidden">
+         <div id="other" className="p-4 py-36 md:py-34 overflow-hidden">
 
             <div className="grid max-w-7xl mx-auto md:grid md:grid-cols-2">
                  <div>
