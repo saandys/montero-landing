@@ -17,6 +17,10 @@ export const metadata: Metadata = {
   description:
     "En Zapatería Montero cuidamos cada paso que das. Más de 20 años de experiencia reparando y restaurando zapatos, bolsos y prendas con técnicas artesanales en Catral (Alicante).",
   keywords: ["zapatería Catral", "reparación de calzado", "restauración de zapatos", "arreglo de bolsos", "taller artesanal de cuero", "zapatos a medida", "arreglos de costura"],
+  icons: {
+    icon: { url: "/images/zapato.png", type: "image/png" }, // <- aquí pones tu favicon
+  
+  },
   openGraph: {
     title: "Zapatería Montero | Tu zapatería de toda la vida en Catral",
     description: "Dos generaciones dedicadas al arte de la reparación de calzado. Restauramos tus zapatos y artículos de piel con pasión y calidad artesanal.",
