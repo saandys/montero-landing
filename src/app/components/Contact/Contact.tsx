@@ -16,7 +16,7 @@ const Contact = () => {
   const [message, setMessage] = useState("");
 
    const whatsappNumber = "34690151736"; // tu número
-  const text = `¡Hola! 😄\nMe quería poner en contacto con vosotros porque... \n¡Espero tu respuesta pronto! 🚀`;
+  const text = `¡Hola! \nMe quería poner en contacto con vosotros porque... \n¡Espero tu respuesta pronto! `;
   const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
   
   return (
