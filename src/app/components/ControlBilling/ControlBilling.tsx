@@ -67,7 +67,7 @@ export function ControlBilling(){
               </Reveal>
               {/* Imagen contenida en altura */}
               <div className="flex items-center justify-center flex-1 mt-10 max-h-full">
-                <Image
+                <img
                     src="/images/depie2.png"
                     alt="Card"
                     width={250}

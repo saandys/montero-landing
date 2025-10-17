@@ -14,7 +14,7 @@ export function Footer() {
  
   <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-5 ">
     <div className="flex justify-center items-center lg:justify-start lg:items-start lg:py-0">
-  <Image
+  <img
   src="/images/logo.png"
   width={100}
   height={20}

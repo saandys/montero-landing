@@ -37,7 +37,7 @@ export default function PaymentMethods() {
             >
             {dataPaymentMethods.map(({ id, image }) => (
                 <SwiperSlide key={id} className="flex items-center justify-center">
-                <Image
+                <img
                     src={image}
                     alt="payment"
                     width={120}

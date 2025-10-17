@@ -83,7 +83,7 @@ export function ChooseYourCards() {
                   >
                     {dataCards.map(({ image, id }) => (
                       <SwiperSlide key={id} className="flex items-center justify-center h-full">
-                        <Image
+                        <img
                           src={image}
                           alt="Credit card"
                           width={300}

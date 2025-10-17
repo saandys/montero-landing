@@ -91,7 +91,7 @@ const About1 = () => {
             </h2>
           </div>
           <div>
-            <Image
+            <img
               src="https://shadcnblocks.com/images/block/placeholder-1.svg"
               alt="placeholder"
               className="mb-6 max-h-36 w-full rounded-xl object-cover"
