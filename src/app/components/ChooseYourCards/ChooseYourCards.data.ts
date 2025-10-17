@@ -1,7 +1,7 @@
 export const dataCards = [
     {
         id: 1,
-        image: "/images/fofucha2.jpg",
+        image: "/images/tarta.jpg",
     },
     {
         id: 2,
@@ -9,7 +9,7 @@ export const dataCards = [
     },
     {
         id: 3,
-        image: "/images/tarta.jpg",
+        image: "/images/fofucha2.jpg",
     },
     {
         id: 4,
