@@ -85,7 +85,7 @@ export function ChooseYourCards() {
                       <SwiperSlide key={id} className="flex items-center justify-center h-full">
                         <img
                           src={image}
-                          alt="Credit card"
+                          alt="Especiales"
                           width={300}
                           height={200}
                           sizes="(max-width: 640px) 240px, (max-width: 768px) 320px, 400px"

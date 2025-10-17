@@ -13,8 +13,29 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Reparaciones Montero",
-  description: "Tus reparaciones",
+  title: "Zapatería Montero | Reparación y restauración artesanal de calzado en Catral",
+  description:
+    "En Zapatería Montero cuidamos cada paso que das. Más de 20 años de experiencia reparando y restaurando zapatos, bolsos y prendas con técnicas artesanales en Catral (Alicante).",
+  keywords: ["zapatería Catral", "reparación de calzado", "restauración de zapatos", "arreglo de bolsos", "taller artesanal de cuero", "zapatos a medida", "arreglos de costura"],
+  openGraph: {
+    title: "Zapatería Montero | Tu zapatería de toda la vida en Catral",
+    description: "Dos generaciones dedicadas al arte de la reparación de calzado. Restauramos tus zapatos y artículos de piel con pasión y calidad artesanal.",
+    url: "https://zapateriamontero.com",
+    siteName: "Zapatería Montero",
+    images: [
+      {
+        url: "https://zapateriamontero.com/home_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Zapatería Montero Catral",
+      },
+    ],
+    locale: "es_ES",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://zapateriamontero.com",
+  },
 };
 
 export default function RootLayout({

@@ -15,6 +15,8 @@ import Silk from "@/components/Silk";
 import Aurora from "@/components/Aurora";
 import StaggeredMenu from "@/components/StaggeredMenu";
 import { useEffect, useRef, useState } from "react";
+import Head from "next/head";
+
 
 // --- ClientOnly wrapper ---
 const ClientOnly = ({ children }: { children: React.ReactNode }) => {
@@ -86,6 +88,7 @@ const socialItems = [
     setMounted(true); // asegura que esto solo se haga en cliente
   }, []);
     return (
+
 
       <main className={markazi.className}>
          {mounted && <div className={`fixed inset-0 z-[1000] lg:hidden ${menuMobileOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
