@@ -111,7 +111,8 @@ const socialItems = [
           
          <div className="relative w-full h-full">
             {/* Silk como fondo */}
-            <div  className="absolute hidden md:block inset-0 -z-10">
+            <div  className="absolute hidden  inset-0 -z-10"> 
+               {/* md:block */}
               
               <Silk
                 speed={5}
@@ -126,7 +127,7 @@ const socialItems = [
             <div className="relative z-10">
                 <div   className="min-h-screen p-2 text-[#f3ebe2] 
              bg-[#674321] bg-[url('/images/dark-leather.png')] bg-repeat bg-auto bg-blend-overlay
-             md:bg-none md:bg-transparent">
+            ">
               <Header />
               <FirstBlock />
               </div>
@@ -136,7 +137,7 @@ const socialItems = [
         
           <CounterData />
         <div className="bg-[#180e05] relative  w-full h-full">
-          <div  className="absolute hidden md:block w-full h-full">
+          <div  className="absolute hidden  w-full h-full">
            
              <Aurora
 
@@ -152,8 +153,8 @@ const socialItems = [
           </div>
 
   {/* 🌤️ Sombra marrón clara SOLO visible en móvil */}
-   <div className="absolute top-0 left-0 w-full h-40 md:hidden pointer-events-none z-10">
-    <div className=" md:hidden w-full h-full bg-gradient-to-b from-[#b58a61]/60 to-transparent rounded-b-full blur-3xl"></div>
+   <div className="absolute top-0 left-0 w-full h-40  pointer-events-none z-10">
+    <div className="  w-full h-full bg-gradient-to-b from-[#b58a61]/60 to-transparent rounded-b-full blur-3xl"></div>
   </div>
   
          <BestBusiness />
