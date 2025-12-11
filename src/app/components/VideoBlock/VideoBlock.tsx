@@ -26,11 +26,11 @@ export default function VideoBlock() {
     playsInline
     className="w-full h-full object-cover opacity-45"
     style={{
-      WebkitMaskImage: "url('/images/mask7.png')",
+      WebkitMaskImage: "url('/images/mask7.webp')",
       WebkitMaskRepeat: "no-repeat",
       WebkitMaskSize: "cover",
       WebkitMaskPosition: "center",
-      maskImage: "url('/images/mask7.png')",
+      maskImage: "url('/images/mask7.webp')",
       maskRepeat: "no-repeat",
       maskSize: "100% 100%",
     }}

@@ -64,7 +64,7 @@ export function FirstBlock() {
 
       <MotionTransition className="flex items-center justify-center">
         <img
-          src="/images/home_image.png"
+          src="/images/home_image.webp"
           alt="Card"
           width={550}
           height={550}

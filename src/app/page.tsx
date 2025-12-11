@@ -129,7 +129,7 @@ const socialItems = [
             {/* Contenido encima del fondo */}
             <div className="relative z-10">
                 <div   className="min-h-screen p-2 text-[#f3ebe2] 
-             bg-[#674321] bg-[url('/images/dark-leather.png')] bg-repeat bg-auto bg-blend-overlay
+             bg-[#674321] bg-[url('/images/dark-leather.webp')] bg-repeat bg-auto bg-blend-overlay
             ">
               <Header />
               <FirstBlock />

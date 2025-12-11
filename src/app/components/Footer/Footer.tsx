@@ -15,7 +15,7 @@ export function Footer() {
   <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-5 ">
     <div className="flex justify-center items-center lg:justify-start lg:items-start lg:py-0">
   <img
-  src="/images/logo.png"
+  src="/images/logo.webp"
   width={100}
   height={20}
   alt="Montero Sanz"

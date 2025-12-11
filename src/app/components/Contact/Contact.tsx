@@ -43,7 +43,7 @@ const Contact = () => {
                         <Reveal key={id}>
                         <div className="my-5 ml-10 md:mt-5 md:m-0 flex w-full max-w-[370px]">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-[#946D47]/5 text-primary sm:h-[70px] sm:max-w-[70px]">
-                    <img src={`/images/${icon}.png`} alt={title} width={60} height={60} />
+                    <img src={`/images/${icon}.webp`} alt={title} width={60} height={60} />
                     
                   </div>
                   <div className="w-full">
