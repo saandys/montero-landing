@@ -32,12 +32,12 @@ export function Footer() {
       key={item.id}
       className="relative lg:inline-block lg:pe-8 lg:last:pe-0 lg:last-of-type:before:hidden
                  lg:before:absolute lg:before:top-1/2 lg:before:end-3 lg:before:-translate-y-1/2
-                 lg:before:content-['/'] lg:before:text-gray-300 lg:dark:before:text-[#946D47]/30"
+                 lg:before:content-['/']  lg:before:text-[#946D47]/30"
     >
       <a
-        className="inline-flex gap-x-2 text-sm text-[#946D47] hover:text-gray-800 
-                   focus:outline-none focus:text-[#946D47]/40 dark:text-[#ac8b6a] 
-                   dark:hover:text-[#e0c6ad] dark:focus:text-[#ac8b6a]
+        className="inline-flex gap-x-2 text-sm  
+                   focus:outline-none text-[#ac8b6a] 
+                   hover:text-[#e0c6ad] focus:text-[#ac8b6a]
                    p-2 rounded-md transition-colors duration-200
                    bg-[#180e05]/50 hover:bg-[#946D47]/10 lg:bg-transparent lg:hover:bg-transparent"
         href={item.link}
@@ -75,7 +75,7 @@ export function Footer() {
 
 </footer>
 <hr className="border-t border-[#946D47]/60 my-4">
-</hr>        <span className="text-center justify-center flex text-sm text-[#946D47] sm:text-center dark:text-[#59422b]">© 2025 Zapateria Montero. All Rights Reserved</span>
+</hr>        <span className="text-center justify-center flex text-sm sm:text-center text-[#59422b]">© 2025 Zapateria Montero. All Rights Reserved</span>
 
 </div>
 

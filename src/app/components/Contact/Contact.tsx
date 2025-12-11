@@ -43,10 +43,10 @@ const Contact = () => {
                     
                   </div>
                   <div className="w-full">
-                    <h4 className="mb-1 text-xl font-bold text-dark dark:text-white">
+                    <h4 className="mb-1 text-xl font-boldtext-white">
                       {title}
                     </h4>
-                    <p className="text-base text-body-color dark:text-dark-6">
+                    <p className="text-base text-body-color text-dark-6">
                       {description}
                     </p>
                   </div>
@@ -127,7 +127,7 @@ type ContactTextAreaProps = {
           rows={Number(row)}
           placeholder={placeholder}
           name={name}
-          className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
+          className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary border-dark-3 bg-dark text-dark-6"
           defaultValue={defaultValue}
           onChange={onChange}
         />
@@ -153,7 +153,7 @@ const ContactInputBox = ({ type, placeholder, name, onChange }: ContactInputProp
           type={type}
           placeholder={placeholder}
           name={name}
-          className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
+          className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary border-dark-3 bg-dark text-dark-6"
           onChange={onChange}
 
         />
