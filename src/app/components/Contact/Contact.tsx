@@ -4,11 +4,7 @@ import { dataContactItems } from "./Contact.data";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
-import { Gasoek_One } from "next/font/google";
-
-
-const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
-
+import { gasoekOne } from "@/lib/fonts";
 
 const Contact = () => {
 

@@ -13,7 +13,7 @@ import Contact from "./components/Contact/Contact";
 import Silk from "@/components/Silk";
 import Aurora from "@/components/Aurora";
 import StaggeredMenu from "@/components/StaggeredMenu";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const markazi = PT_Sans ({
   weight: '400',

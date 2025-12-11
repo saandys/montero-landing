@@ -3,9 +3,7 @@
 import Image from "next/image"
 import { MotionTransition } from "../MotionTransition"
 import { Reveal } from "../Reveal"
-import { Gasoek_One } from "next/font/google"
-
-const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
+import { gasoekOne } from "@/lib/fonts"
 
 
 export function ControlBilling(){

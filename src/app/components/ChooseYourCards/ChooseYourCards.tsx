@@ -9,9 +9,7 @@ import Image from "next/image";
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 import { useRef, useEffect, useState, ReactNode } from 'react';
-import { Gasoek_One } from "next/font/google";
-
-const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
+import { gasoekOne } from "@/lib/fonts";
 
 
 type LazyLoadProps = {

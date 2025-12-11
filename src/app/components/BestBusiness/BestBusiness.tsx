@@ -5,8 +5,7 @@ import { BackgroundRadialLeft } from "../BackgroundRadialLeft"
 import { Reveal } from "../Reveal"
 import { dataFeaturesBusiness } from "./BestBusiness.data"
 import Image from "next/image"
-import { Gasoek_One } from "next/font/google"
-const gasoekOne = Gasoek_One({ subsets: ['latin'], weight: '400' })
+import { gasoekOne } from "@/lib/fonts"
 
 export function BestBusiness() {
     return (
