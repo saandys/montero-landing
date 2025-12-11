@@ -7,48 +7,13 @@ import CounterData from "./components/CounterData/CounterData";
 import { FirstBlock } from "./components/FirstBlock";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header/header";
-import PaymentMethods from "./components/PaymentMethods/PaymentMethods";
-import { Domine, Faustina, Inter, Markazi_Text, PT_Sans, Radley, Zen_Antique_Soft   } from 'next/font/google'
+import { PT_Sans  } from 'next/font/google'
 import VideoBlock from "./components/VideoBlock/VideoBlock";
 import Contact from "./components/Contact/Contact";
 import Silk from "@/components/Silk";
 import Aurora from "@/components/Aurora";
 import StaggeredMenu from "@/components/StaggeredMenu";
 import { useEffect, useRef, useState } from "react";
-import Head from "next/head";
-
-
-// --- ClientOnly wrapper ---
-const ClientOnly = ({ children }: { children: React.ReactNode }) => {
-  const [isClient, setIsClient] = useState(false)
-  useEffect(() => setIsClient(true), [])
-  if (!isClient) return null
-  return <>{children}</>
-}
-
-// --- LazyLoad wrapper ---
-const LazyLoad = ({ children, rootMargin = "200px 0px", threshold = 0 }: { children: React.ReactNode, rootMargin?: string, threshold?: number }) => {
-  const ref = useRef<HTMLDivElement>(null)
-  const [isVisible, setIsVisible] = useState(false)
-
-  useEffect(() => {
-    if (!ref.current) return
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setIsVisible(true) },
-      { rootMargin, threshold }
-    )
-    observer.observe(ref.current)
-    return () => observer.disconnect()
-  }, [ref, rootMargin, threshold])
-
-  return <div ref={ref}>{isVisible ? children : null}</div>
-}
-
-
-const roboto = Inter ({
-  weight: '400',
-  subsets: ['latin'],
-})
 
 const markazi = PT_Sans ({
   weight: '400',
@@ -71,16 +36,6 @@ const Home = () => {
 ];
 
 const [menuMobileOpen, setMenuMobileOpen] = useState(false);
-
-const socialItems = [
-/*
-  { label: 'Twitter', link: 'https://twitter.com' },
-
-  { label: 'GitHub', link: 'https://github.com' },
-
-  { label: 'LinkedIn', link: 'https://linkedin.com' }
-*/
-];
 
  const [mounted, setMounted] = useState(false);
 
