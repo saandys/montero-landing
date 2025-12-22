@@ -1,7 +1,5 @@
-import Image from "next/image";
-import { Reveal } from "../Reveal";
-import Link from "next/link";
-import { footerData, footerSocialNetworks } from "./Footer.data";
+
+import { footerData } from "./Footer.data";
 
 
 export function Footer() {

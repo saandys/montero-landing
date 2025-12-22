@@ -1,9 +1,7 @@
 "use client"
 
-import Image from "next/image"
 import { MotionTransition } from "../MotionTransition"
 import { Reveal } from "../Reveal"
-import { gasoekOne } from "@/lib/fonts"
 
 
 export function ControlBilling(){
@@ -54,7 +52,7 @@ export function ControlBilling(){
           {/* Columna derecha: texto + imagen */}
           <div className="flex-1 p-6 md:p-8 flex flex-col h-full">
             <Reveal>
-              <h2 className={`text-5xl font-semibold ${gasoekOne.className}`}>
+              <h2 className={`text-5xl font-gasoek`}>
                 <span className="text-[#e4a674]">Calidad artesanal</span> <br /> al mejor precio
               </h2>
             </Reveal>

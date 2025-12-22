@@ -1,15 +1,11 @@
 import React, { useState } from "react";
 import { Reveal } from "../Reveal";
 import { dataContactItems } from "./Contact.data";
-import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
-import { gasoekOne } from "@/lib/fonts";
 
 const Contact = () => {
 
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
 
    const whatsappNumber = "34690151736"; // tu número
   const text = `¡Hola! \nMe quería poner en contacto con vosotros porque... \n¡Espero tu respuesta pronto! `;
@@ -21,8 +17,8 @@ const Contact = () => {
         <div className="grid max-w-7xl mx-auto md:grid-cols-2 ">
               <div className="pl-8 md:mt-0 mt-5 md:pl-20 mb-12 max-w-[570px] lg:mb-0 mr-4">
                 <Reveal>
-                    <h2 className={`text-5xl font-semibold ${gasoekOne.className}`}>Contacta con
-                        <span className={`block text-[#e4a674] ${gasoekOne.className}`}> nosotros</span>
+                    <h2 className={`text-5xl font-gasoek`}>Contacta con
+                        <span className={`block text-[#e4a674] font-gasoek`}> nosotros</span>
                     </h2>
                 </Reveal>
                 <Reveal>

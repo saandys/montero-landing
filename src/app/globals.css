@@ -157,3 +157,39 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@font-face {
+  font-family: 'Gasoek One';
+  src: url('/fonts/GasoekOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Dynalight';
+  src: url('/fonts/Dynalight-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('/fonts/PTSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-ptSans {
+  font-family: 'PTSans', sans-serif;
+}
+
+.font-gasoek {
+  font-family: 'Gasoek One', sans-serif;
+}
+
+.font-dynalight {
+  font-family: 'Dynalight', sans-serif;
+}

@@ -1,5 +1,4 @@
 import { cn } from "../../lib/utils";
-import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import {
   AnimatePresence,
   MotionValue,
@@ -10,7 +9,6 @@ import {
 } from "motion/react";
 
 import { useRef, useState } from "react";
-import StaggeredMenu from "../StaggeredMenu";
 
 export const FloatingDock = ({
   items,

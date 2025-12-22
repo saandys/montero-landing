@@ -1,15 +1,12 @@
 "use clients"
-import { BackgroundRadialRight } from "../BackgroundRadialRight";
 import { MotionTransition } from "../MotionTransition";
 import { Reveal } from "../Reveal";
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { EffectCards } from "swiper/modules"
 import { dataCards } from "./ChooseYourCards.data";
-import Image from "next/image";
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 import { useRef, useEffect, useState, ReactNode } from 'react';
-import { gasoekOne } from "@/lib/fonts";
 
 
 type LazyLoadProps = {
@@ -47,7 +44,7 @@ export function ChooseYourCards() {
             <div className="grid max-w-7xl mx-auto md:grid md:grid-cols-2">
                  <div>
                   <Reveal>
-                    <h2 className={`text-5xl font-semibold whitespace-normal ${gasoekOne.className}`}>  <span className=" text-[#180e05] block">Creaciones <br/>hechas a mano </span>
+                    <h2 className={`text-5xl whitespace-normal font-gasoek`}>  <span className=" text-[#180e05] block">Creaciones <br/>hechas a mano </span>
                        para momentos especiales
                         
                     </h2>

@@ -7,7 +7,6 @@ import CounterData from "./components/CounterData/CounterData";
 import { FirstBlock } from "./components/FirstBlock";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header/header";
-import { PT_Sans  } from 'next/font/google'
 import VideoBlock from "./components/VideoBlock/VideoBlock";
 import Contact from "./components/Contact/Contact";
 import Silk from "@/components/Silk";
@@ -15,10 +14,6 @@ import Aurora from "@/components/Aurora";
 import StaggeredMenu from "@/components/StaggeredMenu";
 import { useEffect, useState } from "react";
 
-const markazi = PT_Sans ({
-  weight: '400',
-  subsets: ['latin'],
-})
 
 const Home = () => {
   const menuItems = [
@@ -45,7 +40,7 @@ const [menuMobileOpen, setMenuMobileOpen] = useState(false);
     return (
 
 
-      <main className={markazi.className}>
+      <main className="font-ptSans">
          {mounted && <div className={`fixed inset-0 z-[1000] lg:hidden ${menuMobileOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}>
           <StaggeredMenu
             position="right"

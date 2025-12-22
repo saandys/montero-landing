@@ -1,11 +1,7 @@
 "use client"
 
-import Link from "next/link"
-import { BackgroundRadialLeft } from "../BackgroundRadialLeft"
 import { Reveal } from "../Reveal"
 import { dataFeaturesBusiness } from "./BestBusiness.data"
-import Image from "next/image"
-import { gasoekOne } from "@/lib/fonts"
 
 export function BestBusiness() {
     return (
@@ -14,7 +10,7 @@ export function BestBusiness() {
             <div className="grid max-w-7xl mx-auto md:grid-cols-2">
                 <div>
                     <Reveal>
-                        <h2 className={`text-5xl font-semibold ${gasoekOne.className}`}>
+                        <h2 className={`text-5xl font-gasoek`}>
                             <span className=" text-[#e4a674] ">Más que </span>
                             una <br/> <span className="text-[#e4a674] ">zapatería</span>, un <br/>taller artesanal
                         </h2>
