@@ -50,7 +50,7 @@ export function ChooseYourCards() {
                     </h2>
                 </Reveal>
                  <Reveal>
-                    <p className="max-w-md mt-10">Además de nuestros zapatos, también damos vida a muñecas artesanales, únicas y llenas de detalles. Cada una está hecha a mano con el mismo cuidado y dedicación que ponemos en todos nuestros trabajos.
+                    <p className="max-w-md mt-10">Además de nuestros zapatos, también damos vida a muñecas artesanales, únicas y llenas de detalles. Cada una está hecha a mano con el mismo cuidado y dedicación que ponemos en todos nuestros trabajos. Además de eso, también realizamos tartas de chuches y de pañales para regalos. ¡Contacta con nosotros si quieres más información!
                     </p>
                 </Reveal>
                 </div>
